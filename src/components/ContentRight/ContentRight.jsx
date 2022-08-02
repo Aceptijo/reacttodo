@@ -1,6 +1,7 @@
 import React from 'react';
 import CompletedTasks from '../CompletedTasks/CompletedTasks';
 import './ContentRight.sass'
+import './ContentRight-media.sass'
 
 
 const ContentRight = () => {

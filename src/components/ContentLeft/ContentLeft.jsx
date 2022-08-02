@@ -3,6 +3,7 @@ import AddTask from '../AddTask/AddTask';
 import AddTaskTotalCount from '../AddTaskTotalCount/AddTaskTotalCount';
 import AllTasks from '../AllTasks/AllTasks';
 import './ContentLeft.sass'
+import './ContentLeft-media.sass'
 
 
 const ContentLeft = () => {

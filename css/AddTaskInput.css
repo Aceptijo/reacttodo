@@ -1,0 +1,18 @@
+.App__add-task-input {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 4px;
+  border: 1px solid #ECECEC;
+  font-size: 14px;
+  font-weight: 400;
+  font-family: "Open Sans", sans-serif;
+}
+.App__add-task-input::-moz-placeholder {
+  color: #CACACA;
+}
+.App__add-task-input:-ms-input-placeholder {
+  color: #CACACA;
+}
+.App__add-task-input::placeholder {
+  color: #CACACA;
+}/*# sourceMappingURL=AddTaskInput.css.map */
