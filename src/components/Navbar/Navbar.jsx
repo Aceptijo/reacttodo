@@ -2,7 +2,7 @@ import React from 'react';
 import NavbarLogo from '../NavbarLogo/NavbarLogo';
 import NavbarTitle from '../NavbarTitle/NavbarTitle';
 import User from '../User/User';
-import './styles.sass'
+import './Navbar.sass'
 
 
 const Navbar = () => {

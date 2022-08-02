@@ -1,7 +1,7 @@
 import React from 'react';
 import AddTaskButton from '../AddTaskButton/AddTaskButton';
 import AddTaskInput from '../AddTaskInput/AddTaskInput';
-import './styles.sass'
+import './AddTask.sass'
 
 
 const AddTask = () => {

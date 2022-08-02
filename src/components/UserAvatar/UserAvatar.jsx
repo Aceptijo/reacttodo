@@ -1,6 +1,6 @@
 import React from 'react';
 import avatar from './accAvatar.svg'
-import './styles.sass'
+import './UserAvatar.sass'
 
 const UserAvatar = () => {
    return (

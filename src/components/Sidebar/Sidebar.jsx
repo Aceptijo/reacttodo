@@ -1,6 +1,6 @@
 import React from 'react';
 import SidebarMenu from '../SidebarMenu/SidebarMenu';
-import './styles.sass'
+import './Sidebar.sass'
 
 
 const Sidebar = () => {

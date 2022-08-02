@@ -1,6 +1,6 @@
 import React from 'react';
 import image from './Vector.svg'
-import './styles.sass'
+import './NavbarLogo.sass'
 
 
 const NavbarLogo = () => {

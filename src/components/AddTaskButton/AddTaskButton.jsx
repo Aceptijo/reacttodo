@@ -1,5 +1,5 @@
 import React from 'react';
-import './styles.sass'
+import './AddTaskButton.sass'
 
 const AddTaskButton = () => {
    return (

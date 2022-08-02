@@ -1,7 +1,7 @@
 import React from 'react';
 import ContentLeft from '../ContentLeft/ContentLeft';
 import ContentRight from '../ContentRight/ContentRight';
-import './styles.sass'
+import './ContentWrapper.sass'
 
 const ContentWrapper = () => {
    return (

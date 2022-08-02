@@ -1,5 +1,5 @@
 import React from 'react';
-import './styles.sass'
+import './AddTaskTotalCount.sass'
 
 const AddTaskTotalCount = (props) => {
    return (

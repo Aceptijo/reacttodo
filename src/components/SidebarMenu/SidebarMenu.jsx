@@ -1,5 +1,5 @@
 import React from 'react';
-import './styles.sass'
+import './SidebarMenu.sass'
 import tasks from './Tasks.svg'
 
 const SidebarMenu = () => {

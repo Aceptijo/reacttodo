@@ -1,6 +1,6 @@
 import React from 'react';
 import Tasks from '../Tasks/Tasks';
-import './styles.sass'
+import './AllTasks.sass'
 
 const AllTasks = () => {
    return (

@@ -2,7 +2,7 @@ import React from 'react';
 import AddTask from '../AddTask/AddTask';
 import AddTaskTotalCount from '../AddTaskTotalCount/AddTaskTotalCount';
 import AllTasks from '../AllTasks/AllTasks';
-import './styles.sass'
+import './ContentLeft.sass'
 
 
 const ContentLeft = () => {

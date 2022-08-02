@@ -1,5 +1,5 @@
 import React from 'react';
-import './styles.sass'
+import './Task.sass'
 import deleteIcon from './deleteIcon.svg'
 import editIcon from './editIcon.svg'
 

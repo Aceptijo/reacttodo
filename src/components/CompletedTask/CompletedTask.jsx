@@ -1,6 +1,6 @@
 import React from 'react';
 import deleteCompletedTask from './deleteIcon.svg'
-import './styles.sass'
+import './CompletedTask.sass'
 
 const CompletedTask = () => {
    return (

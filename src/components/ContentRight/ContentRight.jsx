@@ -1,6 +1,6 @@
 import React from 'react';
 import CompletedTasks from '../CompletedTasks/CompletedTasks';
-import './styles.sass'
+import './ContentRight.sass'
 
 
 const ContentRight = () => {

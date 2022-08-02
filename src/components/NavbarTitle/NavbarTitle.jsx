@@ -1,5 +1,5 @@
 import React from 'react';
-import './styles.sass'
+import './NavbarTitle.sass'
 
 const NavbarTitle = () => {
    return (

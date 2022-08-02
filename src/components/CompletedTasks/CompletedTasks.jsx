@@ -1,6 +1,6 @@
 import React from 'react';
 import CompletedTask from '../CompletedTask/CompletedTask';
-import './styles.sass'
+import './CompletedTasks.sass'
 
 const CompletedTasks = () => {
    return (
