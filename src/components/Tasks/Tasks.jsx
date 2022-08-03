@@ -1,12 +1,12 @@
 import React from 'react';
 import Task from '../Task/Task';
 
-const Tasks = () => {
+const Tasks = ({ tasks }) => {
    return (
       <div className='App__tasks'>
-         <Task />
-         <Task />
-         <Task />
+         {tasks.map((task) => (
+            <Task value={task.body} key={task.key} />
+         ))}
       </div>
    );
 };

@@ -1,15 +1,17 @@
 import React from 'react';
 import './AddTaskButton.sass';
 
-const AddTaskButton = () => {
-   const showInfo = () => {
-      return console.log('asd');
-   };
-
+const AddTaskButton = (props) => {
    return (
-      <button onClick={showInfo} className='App__add-task-button'>
-         Add
-      </button>
+      <form>
+         <button
+            type='submit'
+            className='App__add-task-button'
+            {...props}
+         >
+            Add
+         </button>
+      </form>
    );
 };
 

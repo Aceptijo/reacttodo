@@ -1,12 +1,12 @@
 import React from 'react';
 import Tasks from '../Tasks/Tasks';
-import './AllTasks.sass'
+import './AllTasks.sass';
 
-const AllTasks = () => {
+const AllTasks = ({ tasks }) => {
    return (
       <div className='App__all-tasks'>
-         <span>To do ({3})</span>
-         <Tasks />
+         <span>To do ({tasks.length})</span>
+         <Tasks tasks={tasks} />
       </div>
    );
 };

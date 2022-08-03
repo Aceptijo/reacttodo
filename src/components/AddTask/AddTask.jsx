@@ -1,15 +1,16 @@
-import React, { useState } from 'react';
+import React from 'react';
 import AddTaskButton from '../AddTaskButton/AddTaskButton';
 import AddTaskInput from '../AddTaskInput/AddTaskInput';
 import './AddTask.sass';
 
-const AddTask = () => {
-   // const [task, setTask] = useState({ title: 'asd' })
-
+const AddTask = ({ taskTitle, setTaskTitle, create }) => {
    return (
       <div className='App__add-task'>
-         <AddTaskInput />
-         <AddTaskButton />
+         <AddTaskInput
+            value={taskTitle}
+            onChange={(event) => setTaskTitle(event.target.value)}
+         />
+         <AddTaskButton onClick={create} />
       </div>
    );
 };
