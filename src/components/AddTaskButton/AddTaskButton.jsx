@@ -1,9 +1,13 @@
 import React from 'react';
-import './AddTaskButton.sass'
+import './AddTaskButton.sass';
 
 const AddTaskButton = () => {
+   const showInfo = () => {
+      return console.log('asd');
+   };
+
    return (
-      <button className='App__add-task-button'>
+      <button onClick={showInfo} className='App__add-task-button'>
          Add
       </button>
    );

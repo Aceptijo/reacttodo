@@ -1,1 +1,0 @@
-{"version":3,"sources":["../src/components/CompletedTask/CompletedTask.sass","CompletedTask.css"],"names":[],"mappings":"AAAA;EACG,aAAA;EACA,mBAAA;EACA,QAAA;EACA,aAAA;EACA,wBAAA;EACA,kBAAA;EACA,2CAAA;EACA,eAAA;EACA,gBAAA;EACA,oCAAA;EACA,cAAA;EACA,6BAAA;ACCH;ADAG;EACG,UAAA;ACEN;ADDG;EACG,eAAA;ACGN;ADFG;EACG,eAAA;ACIN","file":"CompletedTask.css"}
