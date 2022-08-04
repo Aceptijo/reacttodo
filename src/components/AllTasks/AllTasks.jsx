@@ -2,11 +2,15 @@ import React from 'react';
 import Tasks from '../Tasks/Tasks';
 import './AllTasks.sass';
 
-const AllTasks = ({ tasks }) => {
+const AllTasks = ({ tasks, remove }) => {
    return (
       <div className='App__all-tasks'>
          <span>To do ({tasks.length})</span>
-         <Tasks tasks={tasks} />
+         {tasks.length ? (
+            <Tasks tasks={tasks} remove={remove} />
+         ) : (
+            <h1>Nothing T_T</h1>
+         )}
       </div>
    );
 };

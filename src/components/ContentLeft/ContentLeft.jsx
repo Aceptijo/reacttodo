@@ -8,30 +8,19 @@ import './ContentLeft-media.sass';
 const ContentLeft = () => {
    const [tasks, setTasks] = useState([]);
 
-   const [taskTitle, setTaskTitle] = useState('');
-
-   const create = (event) => {
-      event.preventDefault();
-      const newTask = {
-         key: Date.now(),
-         body: taskTitle,
-      };
+   const create = (newTask) => {
       setTasks([...tasks, newTask]);
-      setTaskTitle('');
+   };
+
+   const remove = (task) => {
+      setTasks(tasks.filter((t) => t.key !== task.key));
    };
 
    return (
       <div className='App__сontentLeft'>
-         <AddTask
-            tasks={tasks}
-            setTasks={setTasks}
-            key={tasks.id}
-            taskTitle={taskTitle}
-            setTaskTitle={setTaskTitle}
-            create={create}
-         />
+         <AddTask create={create} />
          <AddTaskTotalCount value={tasks.length} />
-         <AllTasks tasks={tasks} key={tasks.id} />
+         <AllTasks remove={remove} tasks={tasks} />
       </div>
    );
 };
