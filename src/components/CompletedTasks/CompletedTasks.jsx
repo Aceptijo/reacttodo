@@ -1,14 +1,19 @@
 import React from 'react';
 import CompletedTask from '../CompletedTask/CompletedTask';
-import './CompletedTasks.sass'
+import './CompletedTasks.sass';
 
-const CompletedTasks = () => {
+const CompletedTasks = ({ completedTasks, removeCompleted, reverseCheck }) => {
    return (
       <div className='App__completed-tasks'>
-         <span>Completed ({3})</span>
-         <CompletedTask />
-         <CompletedTask />
-         <CompletedTask />
+         {completedTasks.map((completed) => (
+            <CompletedTask
+               removeCompleted={removeCompleted}
+               reverseCheck={reverseCheck}
+               completed={completed}
+               value={completed.body}
+               key={completed.key}
+            />
+         ))}
       </div>
    );
 };

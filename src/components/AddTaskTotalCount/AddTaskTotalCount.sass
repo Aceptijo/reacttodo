@@ -1,14 +1,26 @@
-.App__add-task-total-count
+.App__add-task-count
    display: flex
-   align-items: center
-   justify-content: center
-   width: 49px
-   height: 24px
+   align-items: flex-start
+   justify-content: flex-start
+   gap: 8px
    margin-top: 8px
-   background: #FEF6FF
-   border-radius: 4px
-   span
+   font-size: 10px
+   font-weight: 400
+   font-family: 'Open Sans', sans-serif
+   .App__add-task-count-total
       color: #550DC9
+      background: #FEF6FF
       font-size: 12px
-      font-weight: 400
-      font-family: 'Open Sans', sans-serif
+      border-radius: 4px
+      padding: 4px
+   .App__add-task-count-todo
+      color: #0D9CC9
+      background: #F6FCFF
+      border-radius: 4px
+      padding: 4px
+   .App__add-task-count-completed
+      color: #0DC958
+      background: #F6FFF9  
+      border-radius: 4px  
+      padding: 4px
+        

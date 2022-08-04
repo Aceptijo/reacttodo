@@ -12,7 +12,7 @@ const AddTask = ({ create }) => {
          key: Date.now(),
          body: taskTitle,
       };
-      create(newTask);
+      newTask.body === '' ? setTaskTitle('') : create(newTask);
       setTaskTitle('');
    };
 

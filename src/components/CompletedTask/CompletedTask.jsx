@@ -1,16 +1,24 @@
 import React from 'react';
-import deleteCompletedTask from './deleteIcon.svg'
-import './CompletedTask.sass'
+import deleteCompletedTask from './deleteIcon.svg';
+import './CompletedTask.sass';
 
-const CompletedTask = () => {
+const CompletedTask = ({ value, completed, removeCompleted, reverseCheck }) => {
    return (
       <div className='App__completed-task'>
          <input
-            type="checkbox"
+            type='checkbox'
+            onClick={() => {
+               reverseCheck(completed);
+               removeCompleted(completed);
+            }}
             defaultChecked
          />
-         <label>Add Icon to Dashboard</label>
-         <img src={deleteCompletedTask} alt="Delete" />
+         <label>{value}</label>
+         <img
+            src={deleteCompletedTask}
+            onClick={() => removeCompleted(completed)}
+            alt='Delete'
+         />
       </div>
    );
 };
