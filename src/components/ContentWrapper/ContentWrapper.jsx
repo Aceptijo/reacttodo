@@ -7,6 +7,7 @@ import './ContentWrapper-media.sass';
 const ContentWrapper = () => {
    const [tasks, setTasks] = useState([]);
    const [completedTasks, setCompletedTasks] = useState([]);
+   const [taskTitle, setTaskTitle] = useState('');
 
    const create = (newTask) => {
       setTasks([...tasks, newTask]);
@@ -31,16 +32,18 @@ const ContentWrapper = () => {
    return (
       <div className='App__content-wrapper'>
          <ContentLeft
-            completedTasks={completedTasks}
             tasks={tasks}
             check={check}
             create={create}
             remove={remove}
+            taskTitle={taskTitle}
+            setTaskTitle={setTaskTitle}
+            completedTasks={completedTasks}
          />
          <ContentRight
-            completedTasks={completedTasks}
             check={check}
             removeCompleted={removeCompleted}
+            completedTasks={completedTasks}
             reverseCheck={reverseCheck}
          />
       </div>

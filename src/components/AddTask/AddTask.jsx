@@ -1,11 +1,9 @@
-import React, { useState } from 'react';
+import React from 'react';
 import AddTaskButton from '../AddTaskButton/AddTaskButton';
 import AddTaskInput from '../AddTaskInput/AddTaskInput';
 import './AddTask.sass';
 
-const AddTask = ({ create }) => {
-   const [taskTitle, setTaskTitle] = useState('');
-
+const AddTask = ({ create, taskTitle, setTaskTitle }) => {
    const createNewTask = (event) => {
       event.preventDefault();
       const newTask = {

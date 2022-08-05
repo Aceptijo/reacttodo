@@ -13,7 +13,7 @@ const Task = ({ value, remove, task, check }) => {
                remove(task);
             }}
          />
-         <label>{value}</label>
+         <label> {value} </label>
          <img src={editIcon} alt='Edit' />
          <img onClick={() => remove(task)} src={deleteIcon} alt='Delete' />
       </div>

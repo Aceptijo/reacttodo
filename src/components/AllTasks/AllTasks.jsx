@@ -9,7 +9,7 @@ const AllTasks = ({ tasks, remove, check }) => {
          {tasks.length ? (
             <Tasks tasks={tasks} remove={remove} check={check} />
          ) : (
-            <h1>Nothing T_T</h1>
+            <h1>Nothing</h1>
          )}
       </div>
    );
