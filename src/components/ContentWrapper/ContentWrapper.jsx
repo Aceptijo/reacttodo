@@ -8,6 +8,24 @@ const ContentWrapper = () => {
    const [tasks, setTasks] = useState([]);
    const [completedTasks, setCompletedTasks] = useState([]);
    const [taskTitle, setTaskTitle] = useState('');
+   const [editableTask, setEditableTask] = useState(null);
+
+   const editTask = (task) => {
+      setEditableTask(task);
+      setTaskTitle(task.body);
+   };
+
+   const saveEditTask = (newBody) => {
+      const newTask = { ...editableTask, body: newBody };
+      setTasks((tasks) =>
+         tasks.map((task) => (task.key !== newTask.key ? task : newTask))
+      );
+      setEditableTask(null);
+   };
+
+   const cancelEditTask = () => {
+      setEditableTask(null);
+   };
 
    const create = (newTask) => {
       setTasks([...tasks, newTask]);
@@ -32,6 +50,7 @@ const ContentWrapper = () => {
    return (
       <div className='App__content-wrapper'>
          <ContentLeft
+            edit={editTask}
             tasks={tasks}
             check={check}
             create={create}
@@ -39,6 +58,9 @@ const ContentWrapper = () => {
             taskTitle={taskTitle}
             setTaskTitle={setTaskTitle}
             completedTasks={completedTasks}
+            editableTask={editableTask}
+            cancelEditTask={cancelEditTask}
+            saveEditTask={saveEditTask}
          />
          <ContentRight
             check={check}

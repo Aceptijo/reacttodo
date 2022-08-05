@@ -2,8 +2,9 @@ import React from 'react';
 import './Task.sass';
 import deleteIcon from './deleteIcon.svg';
 import editIcon from './editIcon.svg';
+import cancelIcon from './cancel.png';
 
-const Task = ({ value, remove, task, check }) => {
+const Task = ({ value, remove, task, check, edit, editableTask, cancel }) => {
    return (
       <div className='App__task'>
          <input
@@ -14,8 +15,18 @@ const Task = ({ value, remove, task, check }) => {
             }}
          />
          <label> {value} </label>
-         <img src={editIcon} alt='Edit' />
-         <img onClick={() => remove(task)} src={deleteIcon} alt='Delete' />
+         {editableTask?.key === task.key ? (
+            <img onClick={cancel} src={cancelIcon} alt='Cancel' />
+         ) : (
+            <>
+               <img onClick={() => edit(task)} src={editIcon} alt='Edit' />
+               <img
+                  onClick={() => remove(task)}
+                  src={deleteIcon}
+                  alt='Delete'
+               />
+            </>
+         )}
       </div>
    );
 };

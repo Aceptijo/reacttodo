@@ -13,10 +13,16 @@ const ContentLeft = ({
    remove,
    setTaskTitle,
    taskTitle,
+   edit,
+   editableTask,
+   cancelEditTask,
+   saveEditTask,
 }) => {
    return (
       <div className='App__сontentLeft'>
          <AddTask
+            saveEditTask={saveEditTask}
+            isEdit={!!editableTask}
             create={create}
             setTaskTitle={setTaskTitle}
             taskTitle={taskTitle}
@@ -25,7 +31,16 @@ const ContentLeft = ({
             valueTotal={tasks.length}
             valueCompleted={completedTasks.length}
          />
-         <AllTasks remove={remove} tasks={tasks} check={check} />
+         <AllTasks
+            cancelEditTask={cancelEditTask}
+            editableTask={editableTask}
+            edit={edit}
+            remove={remove}
+            tasks={tasks}
+            check={check}
+            setTaskTitle={setTaskTitle}
+            taskTitle={taskTitle}
+         />
       </div>
    );
 };
