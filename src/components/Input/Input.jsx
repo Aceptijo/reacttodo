@@ -1,7 +1,7 @@
 import React from 'react';
-import './AddTaskInput.sass';
+import './Input.sass';
 
-const AddTaskInput = (props) => {
+const Input = (props) => {
    return (
       <form className='App_add-task-form'>
          <input
@@ -14,4 +14,4 @@ const AddTaskInput = (props) => {
    );
 };
 
-export default AddTaskInput;
+export default Input;

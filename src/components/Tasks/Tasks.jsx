@@ -3,28 +3,29 @@ import Task from '../Task/Task';
 
 const Tasks = ({
    tasks,
-   remove,
-   check,
-   setTaskTitle,
-   taskTitle,
    edit,
+   check,
+   remove,
    cancel,
+   taskTitle,
+   setTaskTitle,
    editableTask,
 }) => {
    return (
       <div className='App__tasks'>
          {tasks.map((task) => (
             <Task
-               editableTask={editableTask}
-               cancel={cancel}
+               task={task}
                edit={edit}
                check={check}
+               cancel={cancel}
                remove={remove}
-               task={task}
-               value={task.body}
-               key={task.key}
                taskTitle={taskTitle}
                setTaskTitle={setTaskTitle}
+               editableTask={editableTask}
+               title={task.title}
+               completed={task.completed}
+               key={task.id}
             />
          ))}
       </div>

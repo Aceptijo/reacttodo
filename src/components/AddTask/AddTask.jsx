@@ -1,14 +1,15 @@
 import React from 'react';
 import Button from '../Button';
-import AddTaskInput from '../AddTaskInput/AddTaskInput';
+import Input from '../Input/Input';
 import './AddTask.sass';
 
 const AddTask = ({ create, taskTitle, setTaskTitle, saveEditTask, isEdit }) => {
    const createNewTask = () => {
       if (taskTitle !== '') {
          const newTask = {
-            key: Date.now(),
-            body: taskTitle,
+            title: taskTitle,
+            completed: false,
+            id: Date.now(),
          };
          create(newTask);
          setTaskTitle('');
@@ -24,8 +25,8 @@ const AddTask = ({ create, taskTitle, setTaskTitle, saveEditTask, isEdit }) => {
 
    return (
       <div className='App__add-task'>
-         <AddTaskInput
-            value={taskTitle}
+         <Input
+            title={taskTitle}
             onChange={(event) => setTaskTitle(event.target.value)}
          />
          <Button onClick={isEdit ? handleSaveTask : createNewTask}>

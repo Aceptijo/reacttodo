@@ -10,8 +10,8 @@ const CompletedTasks = ({ completedTasks, removeCompleted, reverseCheck }) => {
                removeCompleted={removeCompleted}
                reverseCheck={reverseCheck}
                completed={completed}
-               value={completed.body}
-               key={completed.key}
+               value={completed.title}
+               key={completed.id}
             />
          ))}
       </div>

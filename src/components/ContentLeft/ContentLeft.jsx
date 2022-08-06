@@ -6,14 +6,14 @@ import './ContentLeft.sass';
 import './ContentLeft-media.sass';
 
 const ContentLeft = ({
-   completedTasks,
+   edit,
    tasks,
    check,
    create,
    remove,
-   setTaskTitle,
    taskTitle,
-   edit,
+   setTaskTitle,
+   completedTasks,
    editableTask,
    cancelEditTask,
    saveEditTask,
@@ -21,25 +21,25 @@ const ContentLeft = ({
    return (
       <div className='App__сontentLeft'>
          <AddTask
+            create={create}
+            taskTitle={taskTitle}
+            setTaskTitle={setTaskTitle}
             saveEditTask={saveEditTask}
             isEdit={!!editableTask}
-            create={create}
-            setTaskTitle={setTaskTitle}
-            taskTitle={taskTitle}
          />
          <AddTaskTotalCount
             valueTotal={tasks.length}
             valueCompleted={completedTasks.length}
          />
          <AllTasks
-            cancelEditTask={cancelEditTask}
-            editableTask={editableTask}
-            edit={edit}
-            remove={remove}
             tasks={tasks}
+            remove={remove}
             check={check}
-            setTaskTitle={setTaskTitle}
+            edit={edit}
             taskTitle={taskTitle}
+            setTaskTitle={setTaskTitle}
+            editableTask={editableTask}
+            cancelEditTask={cancelEditTask}
          />
       </div>
    );

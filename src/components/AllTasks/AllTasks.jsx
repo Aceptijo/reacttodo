@@ -6,25 +6,25 @@ const AllTasks = ({
    tasks,
    remove,
    check,
+   edit,
    taskTitle,
    setTaskTitle,
-   edit,
-   cancelEditTask,
    editableTask,
+   cancelEditTask,
 }) => {
    return (
       <div className='App__all-tasks'>
          <span>To do ({tasks.length})</span>
          {tasks.length ? (
             <Tasks
-               cancel={cancelEditTask}
-               editableTask={editableTask}
-               edit={edit}
                tasks={tasks}
-               remove={remove}
+               edit={edit}
                check={check}
+               remove={remove}
+               cancel={cancelEditTask}
                taskTitle={taskTitle}
                setTaskTitle={setTaskTitle}
+               editableTask={editableTask}
             />
          ) : (
             <h1>Nothing</h1>
