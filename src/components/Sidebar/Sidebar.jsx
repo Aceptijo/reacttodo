@@ -1,7 +1,6 @@
 import React from 'react';
 import SidebarMenu from '../SidebarMenu/SidebarMenu';
-import './Sidebar.sass'
-
+import './Sidebar.sass';
 
 const Sidebar = () => {
    return (

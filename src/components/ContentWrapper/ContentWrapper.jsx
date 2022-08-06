@@ -19,14 +19,11 @@ const ContentWrapper = () => {
       const response = await axios.get(
          'https://jsonplaceholder.typicode.com/todos'
       );
-      const completedTrue = response.data.filter(
-         (task) => task.completed === true
+
+      setTasks(response.data.filter((task) => task.completed === true));
+      setCompletedTasks(
+         response.data.filter((task) => task.completed === false)
       );
-      const completedFalse = response.data.filter(
-         (task) => task.completed === false
-      );
-      setTasks(completedTrue);
-      setCompletedTasks(completedFalse);
    }
 
    const editTask = (task) => {

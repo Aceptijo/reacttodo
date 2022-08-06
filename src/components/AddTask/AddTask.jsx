@@ -26,7 +26,7 @@ const AddTask = ({ create, taskTitle, setTaskTitle, saveEditTask, isEdit }) => {
    return (
       <div className='App__add-task'>
          <Input
-            title={taskTitle}
+            value={taskTitle}
             onChange={(event) => setTaskTitle(event.target.value)}
          />
          <Button onClick={isEdit ? handleSaveTask : createNewTask}>

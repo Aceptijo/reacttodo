@@ -2,7 +2,7 @@ import React from 'react';
 import './Task.sass';
 import deleteIcon from './deleteIcon.svg';
 import editIcon from './editIcon.svg';
-import cancelIcon from './cancel.png';
+import cancelIcon from './cancel.svg';
 
 const Task = ({ title, remove, task, check, edit, editableTask, cancel }) => {
    return (
