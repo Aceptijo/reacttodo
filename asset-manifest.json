@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/reacttodo/static/css/main.326ef5bd.css",
+    "main.css": "/reacttodo/static/css/main.143a4129.css",
     "main.js": "/reacttodo/static/js/main.fec406f1.js",
     "static/media/accAvatar.svg": "/reacttodo/static/media/accAvatar.5c007a08c31f9f4674bdcd12a27b67d1.svg",
     "static/media/deleteIcon.svg": "/reacttodo/static/media/deleteIcon.b00599ecc6865846881db4326cd083e6.svg",
@@ -10,11 +10,11 @@
     "static/media/editIcon.svg": "/reacttodo/static/media/editIcon.15a54e5cb7253b446681a7b2c82cbde8.svg",
     "index.html": "/reacttodo/index.html",
     "static/media/arrow.svg": "/reacttodo/static/media/arrow.991d9ad26fe7e8bd474e6857ecdcf204.svg",
-    "main.326ef5bd.css.map": "/reacttodo/static/css/main.326ef5bd.css.map",
+    "main.143a4129.css.map": "/reacttodo/static/css/main.143a4129.css.map",
     "main.fec406f1.js.map": "/reacttodo/static/js/main.fec406f1.js.map"
   },
   "entrypoints": [
-    "static/css/main.326ef5bd.css",
+    "static/css/main.143a4129.css",
     "static/js/main.fec406f1.js"
   ]
 }
