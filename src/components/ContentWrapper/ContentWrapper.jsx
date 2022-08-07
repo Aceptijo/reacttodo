@@ -20,10 +20,10 @@ const ContentWrapper = () => {
       );
       let content = await response.json();
       setTasks(
-         content.filter((task) => task.completed === false && task.userId === 1)
+         content.filter((task) => task.completed === false && task.userId === 2)
       );
       setCompletedTasks(
-         content.filter((task) => task.completed === true && task.userId === 1)
+         content.filter((task) => task.completed === true && task.userId === 2)
       );
    };
 
