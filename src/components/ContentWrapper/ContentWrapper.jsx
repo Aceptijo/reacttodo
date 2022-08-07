@@ -3,7 +3,6 @@ import ContentLeft from '../ContentLeft/ContentLeft';
 import ContentRight from '../ContentRight/ContentRight';
 import './ContentWrapper.sass';
 import './ContentWrapper-media.sass';
-import axios from 'axios';
 
 const ContentWrapper = () => {
    const [tasks, setTasks] = useState([]);
@@ -12,19 +11,57 @@ const ContentWrapper = () => {
    const [editableTask, setEditableTask] = useState(null);
 
    useEffect(() => {
-      fetchTasks();
+      listingAllResources();
    }, []);
 
-   async function fetchTasks() {
-      const response = await axios.get(
+   const listingAllResources = async () => {
+      const response = await fetch(
          'https://jsonplaceholder.typicode.com/todos'
       );
-
-      setTasks(response.data.filter((task) => task.completed === true));
-      setCompletedTasks(
-         response.data.filter((task) => task.completed === false)
+      let content = await response.json();
+      setTasks(
+         content.filter((task) => task.completed === false && task.userId === 1)
       );
-   }
+      setCompletedTasks(
+         content.filter((task) => task.completed === true && task.userId === 1)
+      );
+   };
+
+   const createNewResource = async () => {
+      await fetch('https://jsonplaceholder.typicode.com/todos', {
+         method: 'POST',
+         body: JSON.stringify({
+            title: taskTitle,
+            completed: false,
+         }),
+         headers: {
+            'Content-type': 'application/json; charset=UTF-8',
+         },
+      })
+         .then((response) => response.json())
+         .then((json) => console.log('New task сreated:', json));
+   };
+
+   const updateResource = async (newBody) => {
+      await fetch('https://jsonplaceholder.typicode.com/todos/200', {
+         method: 'PUT',
+         body: JSON.stringify({
+            title: newBody,
+            completed: false,
+         }),
+         headers: {
+            'Content-type': 'application/json; charset=UTF-8',
+         },
+      })
+         .then((response) => response.json())
+         .then((json) => console.log(`Updated title: ${newBody}`));
+   };
+
+   const deleteResource = async (task) => {
+      fetch('https://jsonplaceholder.typicode.com/todos/201', {
+         method: 'DELETE',
+      }).then(() => console.log('Deleted', task));
+   };
 
    const editTask = (task) => {
       setEditableTask(task);
@@ -36,6 +73,7 @@ const ContentWrapper = () => {
       setTasks((tasks) =>
          tasks.map((task) => (task.id !== newTask.id ? task : newTask))
       );
+      updateResource(newBody);
       setEditableTask(null);
    };
 
@@ -45,23 +83,28 @@ const ContentWrapper = () => {
    };
 
    const create = (newTask) => {
+      createNewResource();
       setTasks([...tasks, newTask]);
    };
 
    const remove = (task) => {
+      deleteResource(task);
       setTasks(tasks.filter((t) => t.id !== task.id));
    };
 
    const removeCompleted = (completed) => {
+      deleteResource(completed);
       setCompletedTasks(completedTasks.filter((t) => t.id !== completed.id));
    };
 
    const check = (checkedTask) => {
+      checkedTask.completed = true;
       setCompletedTasks([...completedTasks, checkedTask]);
    };
 
-   const reverseCheck = (completed) => {
-      setTasks([...tasks, completed]);
+   const reverseCheck = (checkedTask) => {
+      checkedTask.completed = false;
+      setTasks([...tasks, checkedTask]);
    };
 
    return (
